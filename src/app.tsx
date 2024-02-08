@@ -24,33 +24,37 @@ export function App() {
           </p>
         </div>
 
-        <div className='rounded-md bg-slate-800 p-5 space-y-3'>
+        <div className='rounded-md bg-slate-800 p-5 space-y-3 overflow-hidden relative'>
           <span className='text-sm font-medium text-slate-300'>
             há 2 dias
           </span>
           <p className='text-sm leading-6 text-slate-400'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deserunt temporibus a soluta voluptatum, saepe culpa nam est cumque dolore! Sapiente culpa asperiores autem ipsum consequatur sed inventore voluptates assumenda?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deserunt temporibus a soluta voluptatum, saepe culpa nam est cumque dolore! Sapiente culpa asperiores autem ipsum consequatur sed inventore voluptates assumenda? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deserunt temporibus a soluta voluptatum, saepe culpa nam est cumque dolore! Sapiente culpa asperiores autem ipsum consequatur sed inventore voluptates assumenda
           </p>
+
+          <div className='absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/60 from-black pointer-events-none'/>
         </div>
 
-        <div className='rounded-md bg-slate-800 p-5 space-y-3'>
+        <div className='rounded-md bg-slate-800 p-5 space-y-3 overflow-hidden relative'>
           <span className='text-sm font-medium text-slate-300'>
             há 3 dias
           </span>
           <p className='text-sm leading-6 text-slate-400'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde voluptatum alias, ex saepe nemo perferendis culpa incidunt porro qui assumenda veritatis quae eveniet, fuga illum impedit praesentium soluta sunt optio?
           </p>
+          <div className='absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/60 from-black pointer-events-none'/>
         </div>
 
-        <div className='rounded-md bg-slate-800 p-5 space-y-3'>
+        <div className='rounded-md bg-slate-800 p-5 space-y-3 overflow-hidden relative'>
           <span className='text-sm font-medium text-slate-300'>
             há 10 dias
           </span>
           <p className='text-sm leading-6 text-slate-400'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem similique cupiditate corrupti, iure accusamus nam. Voluptate fugit suscipit odit unde quaerat, neque et sapiente nesciunt, perspiciatis placeat quae illo!
           </p>
+          <div className='absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/60 from-black pointer-events-none'/>
         </div>
-        
+
       </div>
 
    
