@@ -3,7 +3,12 @@ import { X } from 'lucide-react'
 import { useState } from 'react';
 import { toast } from 'sonner'
 
-export function NewNoteCard() {
+// interface para tipar as propriedades do componente
+interface NewNoteCardProps {
+    onNoteCreated: (content: string) => void // função que recebe uma string e não retorna nada
+}
+
+export function NewNoteCard( {onNoteCreated} : NewNoteCardProps) {
     const [shouldShowOnBorad, setShouldShowOnBoard] = useState(true)
     const [content, setContent] = useState('')
 
@@ -21,6 +26,9 @@ export function NewNoteCard() {
     function handleSaveNote(event: FormEvent) {
         event.preventDefault()
         console.log(content)
+        onNoteCreated(content) // chama a função passada por propriedade com o conteúdo da nota
+        setContent('') // limpa o conteúdo
+        setShouldShowOnBoard(true) // volta para o modo de gravação
         toast.success('Nota salva com sucesso')
     }
 
@@ -56,6 +64,7 @@ export function NewNoteCard() {
                                     autoFocus
                                     className='text-sm leading-6 bg-transparent resize-none flex-1 outline-none text-slate-400'
                                     onChange={handleContentChage}
+                                    value={content}
                                 />
                             )}
                         </div>
