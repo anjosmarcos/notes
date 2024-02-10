@@ -12,7 +12,15 @@ interface Note {
 
 export function App() {
 
-  const [notes, setNotes] = useState<Note[]>([]); // Inicializa o estado com um array vazio
+  const [notes, setNotes] = useState<Note[]>(() => {
+
+      const notesOnLocalStorage = localStorage.getItem('notes') // Busca as notas no localStorage
+
+      if(notesOnLocalStorage) // Se existirem notas no localStorage
+        return JSON.parse(notesOnLocalStorage) // Retorna as notas convertidas para objeto
+      else
+        return [];
+  }); 
   
   // função para lidar com a criação de uma nova nota
   function onNoteCreated(content: string) {
@@ -22,7 +30,12 @@ export function App() {
       content
     }
 
-    setNotes([newNote, ...notes]) // Adiciona a nova nota no início do array
+    const notesArray = [newNote, ...notes] // Cria um novo array com a nova nota no início
+
+    setNotes(notesArray) // Adiciona a nova nota no início do array
+
+    localStorage.setItem('notes', JSON.stringify(notesArray)) // Salva o array no localStorage
+
   }
 
   return (
