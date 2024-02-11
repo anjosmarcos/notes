@@ -22,6 +22,6 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 O Clene Expert Notes foi desenvolvildo durante o NLW EXPERT da RocketSeat. É uma plataforma versátil para organização de notas, oferecendo inclusive a funcionalidade de gravação de voz para uma experiência mais dinâmica e eficiente.
 
-- [Acesse o projeto online](https://notes-bhi7-dhbn0lc3e-marcosdev.vercel.app/)
+- [Acesse o projeto online](https://notes-bhi7.vercel.app/)
 
 Feito com ❤️ por Marcos Anjos
